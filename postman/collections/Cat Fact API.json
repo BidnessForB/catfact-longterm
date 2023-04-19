@@ -232,7 +232,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"fact\": \"<string>\",\n  \"length\": 200,\n  \"providedLength\": {{$queryParams 'max_length'}}\n}"
+							"body": "{\n  \"fact\": \"<string>\",\n  \"length\": 200\n}"
 						},
 						{
 							"id": "369db8ce-de80-4ace-a379-3ca1cf234f6b",
