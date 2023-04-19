@@ -354,11 +354,39 @@
 			"id": "e51f012a-02d8-42d1-841f-f72ca60af057"
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2e0a0624-9f50-4e4c-aa67-64cb7b06807b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ee91470c-2ba7-4d0b-a76a-4b31cdf0b4e8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "c4a41654-8477-4364-b988-52e2a66898d5",
+			"id": "7268ad7a-c180-49b5-8d4d-88b956d2e102",
 			"key": "baseUrl",
 			"value": "https://0a6330ac-e192-4e7d-97e1-3b974153a481.mock.pstmn.io"
+		},
+		{
+			"id": "e8531af5-7a69-479e-a4cb-8bd1bad1c9fb",
+			"key": "longtermMock",
+			"value": "https://0a6330ac-e192-4e7d-97e1-3b974153a481.mock.pstmn.io",
+			"type": "string"
 		}
 	]
 }
