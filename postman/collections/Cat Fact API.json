@@ -12,6 +12,34 @@
 			"item": [
 				{
 					"name": "Get a list of facts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3a94ab95-0aaa-440b-a49d-e485e5c93943",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 800ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);",
+									"});",
+									"",
+									"var jsonData = pm.response.json();",
+									"",
+									"pm.test('Length is a number', () => {",
+									"    _.each(jsonData, (item) => {",
+									"        pm.expect(typeof item[\"length\"]).to.equal('number');",
+									"    })",
+									"})",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "4e6e4670-9ffd-4e29-82ac-8ce897e6c1f6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -38,9 +66,9 @@
 									"value": "200"
 								},
 								{
-									"description": "limit the amount of results returned",
 									"key": "limit",
-									"value": "2"
+									"value": "2",
+									"description": "limit the amount of results returned"
 								}
 							]
 						},
@@ -102,6 +130,34 @@
 			"item": [
 				{
 					"name": "get Random Fact",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8fbc079f-b01f-43e6-ad42-e81f4aeff6a0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 800ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);",
+									"});",
+									"",
+									"pm.test(\"Response contains fact\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.fact).to.exist;",
+									"});",
+									"",
+									"pm.test(\"Fact element is not null or zero-length\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.fact).to.not.be.null;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "b5924e36-6420-43a6-982e-5512a396d605",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -124,9 +180,9 @@
 							],
 							"query": [
 								{
-									"description": "maximum length of returned fact",
 									"key": "max_length",
-									"value": "200"
+									"value": "200",
+									"description": "maximum length of returned fact"
 								}
 							]
 						},
