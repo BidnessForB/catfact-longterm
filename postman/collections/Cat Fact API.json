@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "3c73cfd8-3694-4b7a-a9e9-48d9f3b207c5",
 		"name": "Cat Fact API",
-		"description": "<img src=\"https://content.pstmn.io/40db1fd2-2228-4bea-9dc5-57764b27f28b/aW1hZ2UucG5n\" alt=\"<br\"><br>width=1504 height=812 /&gt;\n\n# Cat Facts - The API\n\nYou've probably seen this API in action on your favorite social media platform, or you may even be subscribed to our fascinating daily service! Now you can leverage this Postman collection and our OpenAPI 3.0 specification to embed CatFacts in your own products and services!",
+		"description": "<img src=\"https://content.pstmn.io/40db1fd2-2228-4bea-9dc5-57764b27f28b/aW1hZ2UucG5n\">\n\n# Cat Facts - The API\n\nYou've probably seen this API in action on your favorite social media platform, or you may even be subscribed to our fascinating daily service! Now you can leverage this Postman collection and our OpenAPI 3.0 specification to embed CatFacts in your own products and services!",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_uid": "23889826-3c73cfd8-3694-4b7a-a9e9-48d9f3b207c5"
 	},
