@@ -135,6 +135,7 @@
 							"listen": "test",
 							"script": {
 								"id": "5db3a2f9-e9d7-49f9-a72f-6de53254bfac",
+								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -157,8 +158,7 @@
 									"",
 									"",
 									""
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
@@ -184,9 +184,9 @@
 							],
 							"query": [
 								{
+									"description": "maximum length of returned fact",
 									"key": "max_length",
-									"value": "300",
-									"description": "maximum length of returned fact"
+									"value": "300"
 								}
 							]
 						},
@@ -214,9 +214,9 @@
 									],
 									"query": [
 										{
+											"description": "maximum length of returned fact",
 											"key": "max_length",
-											"value": "200",
-											"description": "maximum length of returned fact"
+											"value": "200"
 										}
 									]
 								},
@@ -224,7 +224,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "json",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -232,7 +232,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"fact\": \"<string>\",\n  \"length\": 200,\n  \"providedLength\": {{$queryParams 'max_length'}}\n}"
+							"body": "{\n  \"fact\": \"<string>\",\n  \"length\": 200\n}"
 						},
 						{
 							"id": "369db8ce-de80-4ace-a379-3ca1cf234f6b",
@@ -356,13 +356,70 @@
 				}
 			],
 			"id": "7d7696d9-17c6-481b-af4c-fbcd10e5d19a"
+		},
+		{
+			"name": "get Name",
+			"id": "645a6369-77ed-48e2-b5f3-a593b2fd8f31",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/name",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"name"
+					]
+				},
+				"description": "Suggests a name for a cat"
+			},
+			"response": [
+				{
+					"id": "80916fca-6a75-4439-9573-f5a25b9f82d8",
+					"name": "Normal operation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/name",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"name"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"CatName\": \"<string>\"\n}"
+				}
+			]
 		}
 	],
 	"variable": [
 		{
 			"id": "a74fdc00-55a2-4b80-901d-cfa1c64da2a5",
 			"key": "baseUrl",
-			"value": "https://0a6330ac-e192-4e7d-97e1-3b974153a481.mock.pstmn.io"
+			"value": "https://0a6330ac-e192-4e7d-97e1-3b974153a481.mock.pstmn.io",
+			"type": "string"
 		}
 	]
 }
