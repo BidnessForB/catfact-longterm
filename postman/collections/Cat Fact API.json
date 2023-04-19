@@ -356,62 +356,6 @@
 				}
 			],
 			"id": "7d7696d9-17c6-481b-af4c-fbcd10e5d19a"
-		},
-		{
-			"name": "get Name",
-			"id": "645a6369-77ed-48e2-b5f3-a593b2fd8f31",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/name",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"name"
-					]
-				},
-				"description": "Suggests a name for a cat"
-			},
-			"response": [
-				{
-					"id": "80916fca-6a75-4439-9573-f5a25b9f82d8",
-					"name": "Normal operation",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/name",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"name"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "Text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"CatName\": \"<string>\"\n}"
-				}
-			]
 		}
 	],
 	"variable": [
