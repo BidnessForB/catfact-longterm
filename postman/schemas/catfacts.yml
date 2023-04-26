@@ -5,7 +5,7 @@ info:
     email: contact@catfact.ninja
   version: 1.0.0
 servers: 
-  - url: https://0a6330ac-e192-4e7d-97e1-3b974153a481.mock.pstmn.io
+  - url: https://5cd614ba-1b51-4800-8f80-d2776eeb57e7.mock.pstmn.io
     description: Postman mock
   - url: https://catfact.ninja
     description: prod
