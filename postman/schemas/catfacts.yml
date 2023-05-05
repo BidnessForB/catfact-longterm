@@ -14,7 +14,7 @@ paths:
     get:
       tags:
         - Breeds
-      description: Returns a a list of breeds
+      description: Returns a list of breeds
       operationId: getBreeds
       parameters:
         - name: limit
