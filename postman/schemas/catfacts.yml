@@ -34,7 +34,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Breed'
-  /fact:
+  /fact/:
     get:
       tags:
         - Facts
@@ -153,5 +153,3 @@ tags:
     description: Cat Facts
   - name: Breeds
     description: Breeds
-#security:
-#    - CatAPIKey: []            
