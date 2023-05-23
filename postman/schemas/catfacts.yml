@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Cat Fact API
   contact:
-    email: bryan.cross@postman.com
+    email: bryanrkcross@gmail.com
   version: 1.0.0
 servers: 
   - url: https://5cd614ba-1b51-4800-8f80-d2776eeb57e7.mock.pstmn.io
