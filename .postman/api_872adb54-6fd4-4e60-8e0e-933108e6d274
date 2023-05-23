@@ -10,6 +10,7 @@ id = 872adb54-6fd4-4e60-8e0e-933108e6d274
 [config.relations.collections]
 rootDirectory = postman/collections
 files[] = {"id":"23889826-3c73cfd8-3694-4b7a-a9e9-48d9f3b207c5","path":"Cat Fact API.json","metaData":{"generateCollectionPreferences":"{\"updateCollectionSync\":true}"}}
+files[] = {"id":"23889826-452ceda4-ec7e-4c0c-8b35-7f407554928b","path":"cat fact BR.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Schema\",\"folderStrategy\":\"Tags\",\"includeAuthInfoInExample\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"collapseFolders\":false,\"optimizeConversion\":true,\"requestParametersResolution\":\"Schema\",\"exampleParametersResolution\":\"Schema\",\"disableOptionalParameters\":false,\"updateCollectionSync\":true}"}}
 
 [config.relations.collections.metaData]
 
