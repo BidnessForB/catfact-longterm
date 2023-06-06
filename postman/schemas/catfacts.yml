@@ -2,8 +2,8 @@ openapi: 3.0.0
 info:
   title: Cat Fact API
   contact:
-    email: contact@catfact.ninja
-  version: 1.0.0
+    email: bryan.cross@postman.com
+  version: 1.0.1
 servers: 
   - url: https://5cd614ba-1b51-4800-8f80-d2776eeb57e7.mock.pstmn.io
     description: Postman mock
@@ -153,5 +153,3 @@ tags:
     description: Cat Facts
   - name: Breeds
     description: Breeds
-#security:
-#    - CatAPIKey: []            

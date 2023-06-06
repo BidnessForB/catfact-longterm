@@ -104,9 +104,9 @@
 											"value": "200"
 										},
 										{
-											"description": "limit the amount of results returned",
 											"key": "limit",
-											"value": "2"
+											"value": "2",
+											"description": "limit the amount of results returned"
 										}
 									]
 								},
@@ -236,7 +236,8 @@
 									"value": "application/json"
 								}
 							],
-							"body": "{\n  \"fact\": \"<string>\",\n  \"length\": 200, \n  \"provided_length\": {{$queryParams 'max_length'}}\n}"
+							"cookie": [],
+							"body": "{\n  \"fact\": \"<string>\",\n  \"length\": 200\n}"
 						},
 						{
 							"id": "369db8ce-de80-4ace-a379-3ca1cf234f6b",
@@ -284,6 +285,39 @@
 			"item": [
 				{
 					"name": "get Breeds",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f6837b21-d95d-4209-b7ae-b4353ae2b35e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 800ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);",
+									"});",
+									"",
+									"pm.test(\"Response contains fact\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].breed).to.exist;",
+									"});",
+									"",
+									"pm.test(\"Fact element is not null or zero-length\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    console.log(\"JSON: \", jsonData)",
+									"    pm.expect(jsonData[0].breed).to.not.be.undefined;",
+									"});",
+									"",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "094c8f12-7e57-4427-aeca-50829b905ef1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -306,9 +340,9 @@
 							],
 							"query": [
 								{
-									"description": "This is a description",
 									"key": "limit",
-									"value": "2"
+									"value": "2",
+									"description": "This is a description"
 								}
 							]
 						},
