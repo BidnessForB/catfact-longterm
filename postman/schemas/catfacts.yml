@@ -4,6 +4,7 @@ info:
   contact:
     email: bryan.cross@postman.com
   version: 1.0.1
+  description: An API about cats
 servers: 
   - url: https://5cd614ba-1b51-4800-8f80-d2776eeb57e7.mock.pstmn.io
     description: Postman mock
@@ -67,6 +68,7 @@ paths:
       operationId: getFacts
       parameters:
         - name: max_length
+          description: Lenght of response
           in: query
           required: false
           schema:
