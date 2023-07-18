@@ -4,5 +4,5 @@ metadata:
   name: catfacts-api
 spec:
   type: service
-  owner: user:guest
+  owner: bryan.cross@postman.com
   lifecycle: experimental
