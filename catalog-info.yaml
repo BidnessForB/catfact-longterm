@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: catfacts-apiu
+  name: catfacts-api
 spec:
   type: service
   owner: user:guest
