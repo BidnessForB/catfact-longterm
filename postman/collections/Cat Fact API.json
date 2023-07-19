@@ -11,12 +11,13 @@
 			"name": "Factss",
 			"item": [
 				{
-					"name": "Get a list of facts about cats",
+					"name": "Get a list of facts",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "a86631dd-90be-4666-9705-df1ab2f81d73",
+								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -35,8 +36,7 @@
 									"})",
 									"",
 									""
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
@@ -66,9 +66,9 @@
 									"value": "200"
 								},
 								{
+									"description": "limit the amount of results returned",
 									"key": "limit",
-									"value": "2",
-									"description": "limit the amount of results returned"
+									"value": "2"
 								}
 							]
 						},

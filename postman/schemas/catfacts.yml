@@ -2,20 +2,19 @@ openapi: 3.0.0
 info:
   title: Cat Fact API
   contact:
-    email: bryan.cross@postman.com
-  version: 1.0.1
-  description: An API about cats
+    email: contact@catfact.ninja
+  version: 1.0.0
 servers: 
-  - url: https://5cd614ba-1b51-4800-8f80-d2776eeb57e7.mock.pstmn.io
+  - url: https://0a6330ac-e192-4e7d-97e1-3b974153a481.mock.pstmn.io
     description: Postman mock
   - url: https://catfact.ninja
     description: prod
 paths:
-  /breeds:
+  /breeds/:
     get:
       tags:
         - Breeds
-      description: Returns a list of breeds
+      description: Returns a a list of breeds
       operationId: getBreeds
       parameters:
         - name: limit
@@ -35,7 +34,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Breed'
-  /fact:
+  /fact/:
     get:
       tags:
         - Facts
@@ -68,7 +67,6 @@ paths:
       operationId: getFacts
       parameters:
         - name: max_length
-          description: Lenght of response
           in: query
           required: false
           schema:
@@ -93,6 +91,10 @@ paths:
                 items:
                   $ref: '#/components/schemas/CatFact'
 components:
+  securitySchemes:
+    testAuth:
+      type: http
+      scheme: basic
   schemas:
     Breed:
       title: Breed model
@@ -155,3 +157,5 @@ tags:
     description: Cat Facts
   - name: Breeds
     description: Breeds
+security:
+   - testAuth: []            
