@@ -10,7 +10,18 @@ servers:
   - url: https://catfact.ninja
     description: prod
 paths:
-  /breeds/:
+  /name:
+    get:
+      description: Suggests a name for a cat
+      operationId: getName
+      responses:
+        '200':
+          description: Normal operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatName'  
+  /breeds:
     get:
       tags:
         - Breeds
