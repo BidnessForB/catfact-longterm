@@ -8,10 +8,10 @@
 	},
 	"item": [
 		{
-			"name": "Factss",
+			"name": "Facts",
 			"item": [
 				{
-					"name": "Get a list of facts",
+					"name": "Get a list of facts about cats",
 					"event": [
 						{
 							"listen": "test",
