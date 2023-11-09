@@ -17,7 +17,6 @@
 							"listen": "test",
 							"script": {
 								"id": "a86631dd-90be-4666-9705-df1ab2f81d73",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -36,7 +35,8 @@
 									"})",
 									"",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -53,7 +53,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/facts?max_length=200&limit=2",
+							"raw": "{{baseUrl}}/facts?max_length=200&limit=4",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -66,9 +66,9 @@
 									"value": "200"
 								},
 								{
-									"description": "limit the amount of results returned",
 									"key": "limit",
-									"value": "2"
+									"value": "4",
+									"description": "limit the amount of results returned"
 								}
 							]
 						},
